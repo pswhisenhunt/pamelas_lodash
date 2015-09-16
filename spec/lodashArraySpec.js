@@ -54,4 +54,11 @@ describe('lodash array suite', function() {
       expect(Lodash_Arrays._indexOf([1, 2, 3, 4], 2, true)).toEqual(1);
     });
   });
+
+  describe('_at()', function() {
+    it ('should return the item (or a new array) of the collection at the passed in index', function() {
+      expect(Lodash_Arrays._at(['a','b','c','d'], 0, 2)).toEqual(['a', 'c']);
+      expect(Lodash_Arrays._at(['pamela', 'phillip'], 1)).toEqual(['phillip']);
+    });
+  })
 });

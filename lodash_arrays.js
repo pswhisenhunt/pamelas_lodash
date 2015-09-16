@@ -102,5 +102,16 @@ module.exports = {
       }
     }
     return -1;
+  },
+
+  _at: function() {
+    var args = [].slice.call(arguments);
+    var arr = args[0];
+    var newArr = [];
+    args.shift();
+    for (var i = 0; i < args.length; i++) {
+      newArr.push(arr[args[i]]);
+    }
+    return newArr;
   }
 }
