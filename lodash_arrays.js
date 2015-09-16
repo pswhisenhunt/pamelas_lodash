@@ -43,5 +43,31 @@ module.exports = {
       arr[i] = filler;
     }
     return arr;
+  },
+
+  _flatten: function(arr, isDeep) {
+    var flatten = [];
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] instanceof Array) {
+        flatten = flatten.concat.call(flatten, arr[i]);
+      }
+      else {
+        flatten.push(arr[i]);
+      }
+    }
+    return flatten;
+  },
+
+  _flattenDeep: function(arr) {
+    var flatten = [];
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] instanceof Array) {
+        flatten = flatten.concat(this._flatten.call(flatten, arr[i]));
+      }
+      else {
+        flatten.push(arr[i]);
+      }
+    }
+    return flatten;
   }
 }

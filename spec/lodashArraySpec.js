@@ -34,4 +34,17 @@ describe('lodash array suite', function() {
       expect(Lodash_Arrays._fill([1,2,3], '*')).toEqual(['*','*','*'])
     });
   });
+
+  describe('_flatten()', function() {
+    it ('should return an array flatten to one level', function() {
+      expect(Lodash_Arrays._flatten([[[1]], [2, 3, [4]]])).toEqual([[1], 2, 3, [4]]);
+      expect(Lodash_Arrays._flatten([1, [2, 3, [4]]])).toEqual([1, 2, 3, [4]]);
+    });
+  });
+
+  describe('_flattenDeep()', function() {
+    it ('should return a single array', function() {
+      expect(Lodash_Arrays._flattenDeep([1, [2, 3, [4]]])).toEqual([1, 2, 3, 4]);
+    });
+  });
 });
