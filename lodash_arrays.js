@@ -36,5 +36,12 @@ module.exports = {
       arr.pop();
     }
     return arr;
+  },
+
+  _fill: function(arr, filler) {
+    for (var i = 0; i < arr.length; i++) {
+      arr[i] = filler;
+    }
+    return arr;
   }
 }

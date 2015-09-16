@@ -28,4 +28,10 @@ describe('lodash array suite', function() {
       expect(Lodash_Arrays._dropRight([1, 2, 3], 2)).toEqual([1]);
     });
   });
+
+  describe('_fill()', function() {
+    it ('should fill elements of array with value from start up to, but not including, end ', function() {
+      expect(Lodash_Arrays._fill([1,2,3], '*')).toEqual(['*','*','*'])
+    });
+  });
 });
