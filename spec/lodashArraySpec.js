@@ -21,4 +21,11 @@ describe('lodash array suite', function() {
       expect(Lodash_Arrays._drop([1,2,3,4], 2)).toEqual([3,4]);
     });
   });
+
+  describe('_dropRight()', function() {
+    it ('should creates a slice of array with n elements dropped from the end.', function() {
+      expect(Lodash_Arrays._dropRight([1, 2, 3])).toEqual([1,2]);
+      expect(Lodash_Arrays._dropRight([1, 2, 3], 2)).toEqual([1]);
+    });
+  });
 });

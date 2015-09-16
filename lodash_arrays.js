@@ -28,5 +28,13 @@ module.exports = {
       arr.shift();
     }
     return arr;
+  },
+
+  _dropRight: function(arr, num) {
+    if (!num) { num = 1 };
+    for (var i = 0; i < num; i++) {
+      arr.pop();
+    }
+    return arr;
   }
 }
