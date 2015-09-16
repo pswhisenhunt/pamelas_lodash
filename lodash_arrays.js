@@ -20,5 +20,13 @@ module.exports = {
 
   _compact: function(arr) {
     return arr.filter(Boolean);
+  },
+
+  _drop: function(arr, num) {
+    if (!num) { num = 1 };
+    for (var i = 0; i < num; i++) {
+      arr.shift();
+    }
+    return arr;
   }
 }

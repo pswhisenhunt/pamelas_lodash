@@ -8,10 +8,17 @@ describe('lodash array suite', function() {
     });
   });
 
-  describe('_compact', function() {
+  describe('_compact()', function() {
     it ('should return an array that has been filtered of all falsy values', function() {
       expect(Lodash_Arrays._compact([0, 1, false, 2, '', 3])).toEqual([1, 2, 3]);
       expect(Lodash_Arrays._compact([0, null, '',false,2])).toEqual([2]);
+    });
+  });
+
+  describe('_drop()', function() {
+    it ('should creates a slice of array with n elements dropped from the beginning.', function() {
+      expect(Lodash_Arrays._drop([1, 2, 3])).toEqual([2,3]);
+      expect(Lodash_Arrays._drop([1,2,3,4], 2)).toEqual([3,4]);
     });
   });
 });
