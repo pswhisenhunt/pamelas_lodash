@@ -16,5 +16,9 @@ module.exports = {
       newArray.push(chunk);
     }
     return newArray;
+  },
+
+  _compact: function(arr) {
+    return arr.filter(Boolean);
   }
 }
