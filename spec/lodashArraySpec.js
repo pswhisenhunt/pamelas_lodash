@@ -47,4 +47,11 @@ describe('lodash array suite', function() {
       expect(Lodash_Arrays._flattenDeep([1, [2, 3, [4]]])).toEqual([1, 2, 3, 4]);
     });
   });
+
+  describe('_indexOf()', function() {
+    it ('should return the index of the value passed in. If true is passed in as thrid arg, then a binary search is performed', function() {
+      expect(Lodash_Arrays._indexOf([1, 2, 2], 2)).toEqual(1);
+      expect(Lodash_Arrays._indexOf([1, 2, 3, 4], 2, true)).toEqual(1);
+    });
+  });
 });

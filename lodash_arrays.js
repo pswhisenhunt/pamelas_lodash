@@ -69,5 +69,38 @@ module.exports = {
       }
     }
     return flatten;
+  },
+
+  _indexOf: function(arr, val, binarySearch) {
+    if (binarySearch) {
+      return this._binarySearch(arr, val);
+    }
+    else {
+      for (var i = 0; i < arr.length; i++) {
+        if (val === arr[i]) {
+          return i;
+        }
+      }
+    }
+  },
+
+  _binarySearch: function(arr, val) {
+    var min = 0;
+    var max = arr.length-1;
+    while (min <= max) {
+      var currentIndex = Math.ceil((min + max)/2);
+      var currentIndexVal = arr[currentIndex];
+
+      if (currentIndexVal < val ) {
+        min = currentIndex + 1;
+      }
+      else if (currentIndexVal > val) {
+        max = currentIndex - 1;
+      }
+      else {
+        return currentIndex;
+      }
+    }
+    return -1;
   }
 }
