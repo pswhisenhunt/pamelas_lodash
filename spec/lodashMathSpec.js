@@ -15,8 +15,8 @@ describe('lodash math suite', function() {
 
   describe('_min()', function() {
     it ('should return the smallest value in an array', function() {
-      expect(Lodash_Math._max([2,4,5,6,78,32])).toEqual(2);
-      expect(Lodash_Math._max(users, 'age')).toEqual({ 'user': 'barney', 'age': 36 });
+      expect(Lodash_Math._min([2,4,5,6,78,32])).toEqual(2);
+      expect(Lodash_Math._min(users, 'age')).toEqual({ 'user': 'barney', 'age': 36 });
     });
   });
 
